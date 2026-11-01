@@ -34,6 +34,27 @@ menu:
 
  아두이노로 드론 FC를 만들기, 자세제어 RC카 만들기, Atmega328p를 이용한 임베디드 프로젝트 등 다양한 분야의 프로젝트를 진행했습니다. 
 
+## Technical Skills
+
+### Programming Languages
+- **Python** — AI 객체 인식 및 Raspberry Pi 기반 프로그램 개발
+- **C/C++** — Arduino 및 ESP32 기반 하드웨어 제어
+
+### Embedded Systems
+- **Raspberry Pi** — 카메라 영상 처리 및 시스템 통합
+- **Arduino** — 서보모터 제어 및 점자 출력 장치 개발
+- **ESP32** — 마이크로컨트롤러 기반 로봇 제어 학습
+
+### AI & Computer Vision
+- **YOLO** — 흰지팡이 객체 인식 모델 학습
+- **OpenCV** — 카메라 영상 처리 및 객체 탐지 구현
+
+### Development Tools
+- **Git & GitHub** — 소스 코드 버전 관리
+- **VS Code** — 프로그램 개발 및 디버깅
+- **Autodesk Fusion** — 3D 모델링 및 기구 설계
+- **Arduino** - 아두이노 개발 툴
+
 ## Beyond the Code
 
 ### 3D Modeling & Design
