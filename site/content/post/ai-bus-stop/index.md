@@ -43,3 +43,30 @@ Raspberry Pi의 카메라와 YOLO 객체 인식 모델을 활용하여 흰지팡
 - 서보모터를 활용한 점자 출력 장치 연동
 - 시스템 동작 검증 및 통신 안정성 개선
 
+---
+
+## Development
+
+### System Architecture
+
+본 시스템은 Raspberry Pi와 Arduino를 중심으로 구성된 AI 기반 임베디드 안내 시스템입니다.
+
+**1. Camera & Object Detection**
+
+Raspberry Pi Camera로 입력된 영상을 YOLO 객체 인식 모델과 OpenCV를 활용하여 분석합니다. 흰지팡이가 일정 시간 이상 탐지되면 안내 시스템을 활성화합니다.
+
+**2. Bus Information Processing**
+
+Raspberry Pi에서 목적지에 따른 버스 경로를 탐색하고, 버스 번호와 남은 도착 시간을 관리합니다. 최적의 버스 경로를 탐색하기 위해 BFS 알고리즘을 활용하였습니다.
+
+**3. Bluetooth Communication**
+
+Raspberry Pi와 Arduino는 HC-05 Bluetooth 모듈을 통해 데이터를 주고받습니다. Raspberry Pi는 버스 정보를 전송하고 Arduino로부터 목적지 선택 및 안내 종료 명령을 수신합니다.
+
+**4. Braille Output Device**
+
+Arduino에 연결된 6개의 서보모터를 이용하여 점자 돌기를 제어합니다. 이를 통해 사용자에게 버스 안내 정보를 촉각적으로 제공합니다.
+
+**5. LED Matrix**
+
+MAX7219 기반 8×8 LED Matrix를 활용하여 시스템 시작 및 활성화 상태를 표시합니다.
