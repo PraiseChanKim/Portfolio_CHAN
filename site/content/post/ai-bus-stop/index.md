@@ -70,3 +70,39 @@ Arduino에 연결된 6개의 서보모터를 이용하여 점자 돌기를 제�
 **5. LED Matrix**
 
 MAX7219 기반 8×8 LED Matrix를 활용하여 시스템 시작 및 활성화 상태를 표시합니다.
+
+
+---
+
+## Implementation Process
+
+### 1. YOLO-based White Cane Detection
+
+**데이터셋 준비 및 모델 학습**
+
+시각장애인의 흰지팡이를 탐지하기 위해 YOLO 기반 객체 인식 모델을 학습하였습니다.
+
+Roboflow의 White Cane 데이터셋을 활용하였으며, YOLO11n 모델을 선택하여 객체 탐지 모델을 구성하였습니다.
+
+주요 학습 설정은 다음과 같습니다.
+
+- **Model:** YOLO11n
+- **Dataset:** White Cane Dataset (Roboflow)
+- **Epochs:** 50
+- **Image Size:** 640 × 640
+- **Batch Size:** 16
+- **Detection Class:** white_cane
+
+**모델 변환 및 Raspberry Pi 적용**
+
+학습된 YOLO 모델을 Raspberry Pi 환경에서 실행하기 위해 ONNX 형식으로 변환하였습니다.
+
+변환한 모델은 OpenCV DNN 모듈을 이용하여 실행하도록 구성하였습니다.
+
+이를 통해 Raspberry Pi Camera로 입력된 영상에서 흰지팡이를 실시간으로 탐지하도록 구현하였습니다.
+
+**탐지 안정성 개선**
+
+카메라 영상에서 흰지팡이가 일시적으로 탐지되는 경우에도 시스템이 바로 활성화되지 않도록 하였습니다.
+
+흰지팡이가 약 2초 동안 지속적으로 탐지되면 안내 시스템을 활성화하도록 상태 전환 로직을 구현하여 오작동을 줄이고자 하였습니다.
