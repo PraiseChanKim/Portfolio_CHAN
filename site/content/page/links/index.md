@@ -1,37 +1,20 @@
+
 ---
 title: Links
 links:
-  - title: GitHub
-    description: GitHub is the world's largest software development platform.
-    website: https://github.com
-    image: https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png
-  - title: TypeScript
-    description: TypeScript is a typed superset of JavaScript that compiles to plain JavaScript.
-    website: https://www.typescriptlang.org
-    image: ts-logo-128.jpg
+  - title: GitHub Profile
+    description: 개인 프로젝트 및 개발 기록을 관리하는 GitHub 프로필입니다.
+    website: https://github.com/PraiseChanKim
+
+  - title: AI Bus Stop System
+    description: AI 기반 시각장애인 버스 정류장 안내 시스템의 소스코드 및 3D 모델링 자료입니다.
+    website: https://github.com/PraiseChanKim/AI-Bus-Stop-System
+
 menu:
-    main: 
+    main:
         weight: -50
         params:
             icon: link
 
 comments: false
 ---
-
-To use this feature, add `links` section to frontmatter.
-
-This page's frontmatter:
-
-```yaml
-links:
-  - title: GitHub
-    description: GitHub is the world's largest software development platform.
-    website: https://github.com
-    image: https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png
-  - title: TypeScript
-    description: TypeScript is a typed superset of JavaScript that compiles to plain JavaScript.
-    website: https://www.typescriptlang.org
-    image: ts-logo-128.jpg
-```
-
-`image` field accepts both local and external images.
