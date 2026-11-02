@@ -272,55 +272,91 @@ Raspberry Pi, Arduino, 카메라 및 점자 출력 장치를 통합하여 AI 기
 
 카메라를 통한 흰지팡이 탐지, 목적지에 따른 버스 노선 선택, 블루투스 통신 및 점자 정보 출력 기능을 하나의 시스템으로 통합하였습니다.
 
-<div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 15px; margin: 20px 0;">
 
-  <figure style="margin: 0; text-align: center;">
-    <img src="final_exe_arduino_selec.png"
-         alt="(1). 정류장 선택 [아두이노]"
-         style="width: 100%; height: 250px; object-fit: contain; display: block;">
+<style>
+@media (max-width: 600px) {
+  .arduino-gallery img {
+    width: auto !important;
+    max-width: 100% !important;
+    height: auto !important;
+    max-height: 250px !important;
+    margin: 0 auto;
+  }
+}
+</style>
 
-  <figcaption style="margin-top: 10px;">
+<div class="arduino-gallery" style="display: flex; flex-wrap: wrap; gap: 20px; width: 100%; max-width: 100%; box-sizing: border-box; margin: 20px 0;">
+
+  <figure style="flex: 1 1 240px; min-width: 0; max-width: 100%; margin: 0; text-align: center;">
+
+  <img src="final_exe_arduino_selec.png"
+         alt="정류장 선택 아두이노"
+         style="display: block; width: 100%; max-width: 100%; height: 250px; object-fit: contain;">
+
+  <figcaption style="margin-top: 10px; overflow-wrap: anywhere;">
       (1). 정류장 선택 [아두이노]
     </figcaption>
+
   </figure>
 
-  <figure style="margin: 0; text-align: center;">
-    <img src="final_exe_arduino_rep.png"
-         alt="(2). 버스 정보 받기 [라즈베리파이->아두이노]"
-         style="width: 100%; height: 250px; object-fit: contain; display: block;">
+  <figure style="flex: 1 1 240px; min-width: 0; max-width: 100%; margin: 0; text-align: center;">
 
-  <figcaption style="margin-top: 10px;">
-      (2). 버스 정보 받기 [라즈베리파이->아두이노]
+  <img src="final_exe_arduino_rep.png"
+         alt="버스 정보 수신"
+         style="display: block; width: 100%; max-width: 100%; height: 250px; object-fit: contain;">
+
+  <figcaption style="margin-top: 10px; overflow-wrap: anywhere;">
+      (2). 버스 정보 받기 [라즈베리파이 → 아두이노]
     </figcaption>
+
   </figure>
 
 </div>
+
 
 중간에 다른 정류장을 선택하고 싶을 땐 STOP 명령어를 보내면, 기존의 돌리고 있던 점자판 동작 사이클을 끝낸 후 다시 선택 모드로 들어갑니다. 
 
-<div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 15px; margin: 20px 0;">
 
-  <figure style="margin: 0; text-align: center;">
-    <img src="final_exe_cycle_result.png"
-         alt="(1). STOP -> 기존의 사이클 돌린 후 STOP 명령어 보내기 "
-         style="width: 100%; height: 250px; object-fit: contain; display: block;">
+<style>
+@media (max-width: 600px) {
+  .stop-gallery img {
+    width: auto !important;
+    max-width: 100% !important;
+    height: auto !important;
+    max-height: 250px !important;
+    margin: 0 auto;
+  }
+}
+</style>
 
-  <figcaption style="margin-top: 10px;">
-      (1). STOP -> 기존의 사이클 돌린 후 STOP 명령어 보내기 
+<div class="stop-gallery" style="display: flex; flex-wrap: wrap; gap: 20px; width: 100%; max-width: 100%; box-sizing: border-box; margin: 20px 0;">
+
+  <figure style="flex: 1 1 240px; min-width: 0; max-width: 100%; margin: 0; text-align: center;">
+
+  <img src="final_exe_cycle_result.png"
+         alt="STOP 명령 전송"
+         style="display: block; width: 100%; max-width: 100%; height: 250px; object-fit: contain;">
+
+  <figcaption style="margin-top: 10px; overflow-wrap: anywhere;">
+      (1). STOP 명령 전송
     </figcaption>
+
   </figure>
 
-  <figure style="margin: 0; text-align: center;">
-    <img src="final_exe_exit.png"
-         alt="(2). STOP 명령어 받은 후 다시 대기모드 "
-         style="width: 90%; height: 250px; object-fit: contain; display: block;">
+  <figure style="flex: 1 1 240px; min-width: 0; max-width: 100%; margin: 0; text-align: center;">
 
-  <figcaption style="margin-top: 10px;">
-      (2). STOP 명령어 받은 후 다시 대기모드 
+  <img src="final_exe_exit.png"
+         alt="STOP 명령 수신 후 대기모드"
+         style="display: block; width: 100%; max-width: 100%; height: 250px; object-fit: contain;">
+
+  <figcaption style="margin-top: 10px; overflow-wrap: anywhere;">
+      (2). STOP 명령 수신 후 대기모드
     </figcaption>
+
   </figure>
 
 </div>
+
 
 STOP 후에도 CCTV장치 내에서 버스의 시간은 계속 흐르게 했습니다. 
 
@@ -360,8 +396,8 @@ Raspberry Pi에서 처리한 버스 번호와 남은 시간을 블루투스 통�
 
     [해결 과정]
 
-    - 흰지팡이가 탐지되면 즉시 시스템을 활성화하는 대신, 2초 동안 지속적으로 탐지되는지 
-    확인하는 단계를 추가하였습니다.
+    - 흰지팡이가 탐지되면 즉시 시스템을 활성화하는 대신, 2초 동안 지속적으로 
+    탐지되는지 확인하는 단계를 추가하였습니다.
     이를 통해 일시적인 탐지 결과에 의한 시스템 활성화를 줄이도록 설계하였습니다.
 
     [결과]
@@ -369,29 +405,46 @@ Raspberry Pi에서 처리한 버스 번호와 남은 시간을 블루투스 통�
     - 객체 인식 결과를 일정 시간 검증한 후 안내 기능이 활성화되도록 
     구현하여 시스템 동작의 안정성을 높였습니다.
 
-<div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 15px; margin: 20px 0;">
+<style>
+@media (max-width: 600px) {
+  .stop-gallery img {
+    width: auto !important;
+    max-width: 100% !important;
+    height: auto !important;
+    max-height: 250px !important;
+    margin: 0 auto;
+  }
+}
+</style>
 
-  <figure style="margin: 0; text-align: center;">
-    <img src="final_exe_cane_true.png"
+<div class="stop-gallery" style="display: flex; flex-wrap: wrap; gap: 20px; width: 100%; max-width: 100%; box-sizing: border-box; margin: 20px 0;">
+
+  <figure style="flex: 1 1 240px; min-width: 0; max-width: 100%; margin: 0; text-align: center;">
+
+  <img src="final_exe_cane_true.png"
          alt="지팡이 2초 검출 성공"
-         style="width: 100%; height: 250px; object-fit: contain; display: block;">
+         style="display: block; width: 100%; max-width: 100%; height: 250px; object-fit: contain; object-position: center;">
 
-  <figcaption style="margin-top: 10px;">
+  <figcaption style="margin-top: 10px; overflow-wrap: anywhere;">
       지팡이 2초 검출 성공
     </figcaption>
+
   </figure>
 
-  <figure style="margin: 0; text-align: center;">
-    <img src="final_exe_result.png"
-         alt="지팡이 탐지 화면"
-         style="width: 100%; height: 250px; object-fit: contain; display: block;">
+  <figure style="flex: 1 1 240px; min-width: 0; max-width: 100%; margin: 0; text-align: center;">
 
-  <figcaption style="margin-top: 10px;">
+  <img src="final_exe_result.png"
+         alt="지팡이 탐지 화면"
+         style="display: block; width: 100%; max-width: 100%; height: 250px; object-fit: contain; object-position: center;">
+
+  <figcaption style="margin-top: 10px; overflow-wrap: anywhere;">
       지팡이 탐지 화면
     </figcaption>
+
   </figure>
 
 </div>
+
 
 **2. Bluetooth 연결 해제 및 재연결 문제**
 
@@ -404,7 +457,7 @@ Raspberry Pi에서 처리한 버스 번호와 남은 시간을 블루투스 통�
 
     [해결 과정]
 
-    - Bluetooth 연결이 끊어졌을 때 일정 시간 후 자동으로 재연결하는 기능을 구현하였습니다.
+    - Bluetooth 연결이 끊어졌을 때 자동으로 재연결하는 기능을 구현하였습니다.
     재연결 이후에는 READY 명령으로 통신 상태를 복구하고, 기존에 관리하던 버스 번호와 
     남은 시간을 유지한 상태로 안내 정보를 다시 전송하도록 수정하였습니다.
 
