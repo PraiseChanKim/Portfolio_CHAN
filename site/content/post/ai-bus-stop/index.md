@@ -255,6 +255,58 @@ Raspberry Pi, Arduino, 카메라 및 점자 출력 장치를 통합하여 AI 기
 
 카메라를 통한 흰지팡이 탐지, 목적지에 따른 버스 노선 선택, 블루투스 통신 및 점자 정보 출력 기능을 하나의 시스템으로 통합하였습니다.
 
+<div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 15px; margin: 20px 0;">
+
+  <figure style="margin: 0; text-align: center;">
+    <img src="final_exe_arduino_selec.png"
+         alt="(1). 정류장 선택 [아두이노]"
+         style="width: 100%; height: 250px; object-fit: contain; display: block;">
+
+  <figcaption style="margin-top: 10px;">
+      (1). 정류장 선택 [아두이노]
+    </figcaption>
+  </figure>
+
+  <figure style="margin: 0; text-align: center;">
+    <img src="final_exe_arduino_rep.png"
+         alt="(2). 버스 정보 받기 [라즈베리파이->아두이노]"
+         style="width: 100%; height: 250px; object-fit: contain; display: block;">
+
+  <figcaption style="margin-top: 10px;">
+      (2). 버스 정보 받기 [라즈베리파이->아두이노]
+    </figcaption>
+  </figure>
+
+</div>
+
+중간에 다른 정류장을 선택하고 싶을 땐 STOP 명령어를 보내면, 기존의 돌리고 있던 점자판 동작 사이클을 끝낸 후 다시 선택 모드로 들어갑니다. 
+
+<div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 15px; margin: 20px 0;">
+
+  <figure style="margin: 0; text-align: center;">
+    <img src="final_exe_cycle_result.png"
+         alt="(1). STOP -> 기존의 사이클 돌린 후 STOP 명령어 보내기 "
+         style="width: 100%; height: 250px; object-fit: contain; display: block;">
+
+  <figcaption style="margin-top: 10px;">
+      (1). STOP -> 기존의 사이클 돌린 후 STOP 명령어 보내기 
+    </figcaption>
+  </figure>
+
+  <figure style="margin: 0; text-align: center;">
+    <img src="final_exe_exit.png"
+         alt="(2). STOP 명령어 받은 후 다시 대기모드 "
+         style="width: 90%; height: 250px; object-fit: contain; display: block;">
+
+  <figcaption style="margin-top: 10px;">
+      (2). STOP 명령어 받은 후 다시 대기모드 
+    </figcaption>
+  </figure>
+
+</div>
+
+STOP 후에도 CCTV장치 내에서 버스의 시간은 계속 흐르게 했습니다. 
+
 ### 2. 시스템 작동 영상
 
 아래 영상은 흰지팡이 인식 이후 버스 정보가 Arduino 기반 점자 출력 장치로 전달되어 출력되는 과정을 보여줍니다.
