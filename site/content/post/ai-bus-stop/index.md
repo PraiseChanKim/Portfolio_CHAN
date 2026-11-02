@@ -51,6 +51,24 @@ Raspberry Pi의 카메라와 YOLO 객체 인식 모델을 활용하여 흰지팡
 
 본 시스템은 Raspberry Pi와 Arduino를 중심으로 구성된 AI 기반 임베디드 안내 시스템입니다.
 
+<div style="display: flex; gap: 15px; overflow-x: auto; padding-bottom: 10px;">
+
+  <figure style="flex: 0 0 500px; width: 500px; margin: 0;">
+    <img src="CCTV_model 1.png"
+         alt="라즈베리파이를 이용한 CCTV장치"
+         style="width: 100%; height: auto; object-fit: contain;">
+      라즈베리파이를 이용한 CCTV장치
+  </figure>
+
+  <figure style="flex: 0 0 500px; width: 500px; margin: 0;">
+    <img src="CCTV model_3.png"
+         alt="라즈베리파이를 이용한 CCTV장치_내부"
+         style="width: 100%; height: auto; object-fit: contain;">
+      라즈베리파이를 이용한 CCTV장치_내부
+  </figure>
+
+</div>
+
 **1. Camera & Object Detection**
 
 Raspberry Pi Camera로 입력된 영상을 YOLO 객체 인식 모델과 OpenCV를 활용하여 분석합니다. 흰지팡이가 일정 시간 이상 탐지되면 안내 시스템을 활성화합니다.
@@ -108,6 +126,25 @@ Roboflow의 White Cane 데이터셋을 활용하였으며, YOLO11n 모델을 선
 
 흰지팡이가 약 2초 동안 지속적으로 탐지되면 안내 시스템을 활성화하도록 상태 전환 로직을 구현하여 오작동을 줄이고자 하였습니다.
 
+<div style="display: flex; gap: 15px; overflow-x: auto; padding-bottom: 10px;">
+
+  <figure style="flex: 0 0 500px; width: 500px; margin: 0;">
+    <img src="system-overview_true.png"
+         alt="YOLO 흰지팡이 탐지 성공"
+         style="width: 100%; height: auto; object-fit: contain;">
+      YOLO 흰지팡이 탐지 성공 화면
+  </figure>
+
+  <figure style="flex: 0 0 500px; width: 500px; margin: 0;">
+    <img src="system-overview_false.png"
+         alt="YOLO 흰지팡이 미탐지 화면"
+         style="width: 100%; height: auto; object-fit: contain;">
+      YOLO 흰지팡이 미탐지 화면
+  </figure>
+
+</div>
+
+
 ### 2. Bluetooth Communication
 
 **Raspberry Pi와 Arduino 간 무선 통신**
@@ -123,6 +160,24 @@ Raspberry Pi는 객체 인식과 버스 정보 처리를 담당하고, Arduino�
 - **DEST:** Arduino에서 선택한 목적지 정보 전달
 - **STOP:** 사용자 안내 종료 요청
 
+<div style="display: flex; gap: 15px; overflow-x: auto; padding-bottom: 10px;">
+
+  <figure style="flex: 0 0 500px; width: 500px; margin: 0;">
+    <img src="Arduino_call.png"
+         alt="통신 명령(아두이노)"
+         style="width: 100%; height: auto; object-fit: contain;">
+      통신 명령(아두이노)
+  </figure>
+
+  <figure style="flex: 0 0 500px; width: 500px; margin: 0;">
+    <img src="RaspberryPi_call.png"
+         alt="통신 명령(라즈베리파이)"
+         style="width: 100%; height: auto; object-fit: contain;">
+      통신 명령(라즈베리파이)
+  </figure>
+
+</div>
+
 **통신 안정성 개선**
 
 Bluetooth 연결이 끊어지는 상황에 대응하기 위해 자동 재연결 기능을 구현하였습니다.
@@ -130,6 +185,25 @@ Bluetooth 연결이 끊어지는 상황에 대응하기 위해 자동 재연결 
 재연결 이후에도 버스 도착 시간과 사용자 상태를 유지하도록 구성하였으며, 필요한 안내 정보를 다시 전송하여 시스템이 정상적으로 동작하도록 개선하였습니다.
 
 ### 3. Braille Output Device
+
+<div style="display: flex; gap: 15px; overflow-x: auto; padding-bottom: 10px;">
+
+  <figure style="flex: 0 0 500px; width: 500px; margin: 0;">
+    <img src="Main_Assem_v1.png"
+         alt="아두이노를 이용한 휴대용 점자 출력 장치"
+         style="width: 100%; height: auto; object-fit: contain;">
+      아두이노를 이용한 휴대용 점자 출력 장치
+  </figure>
+
+  <figure style="flex: 0 0 500px; width: 500px; margin: 0;">
+    <img src="Main_Assem_v2.png"
+         alt="아두이노를 이용한 휴대용 점자 출력 장치"
+         style="width: 100%; height: auto; object-fit: contain;">
+      휴대용 점자 출력 장치_내부
+  </figure>
+
+</div>
+
 
 **6개의 서보모터를 활용한 점자 출력 장치**
 
@@ -142,3 +216,15 @@ Bluetooth 연결이 끊어지는 상황에 대응하기 위해 자동 재연결 
 Arduino에서 Bluetooth로 수신한 명령을 처리하고, 점자 출력 장치와 연동하도록 구현하였습니다.
 
 이를 통해 Raspberry Pi의 영상 인식과 버스 정보 처리 기능을 실제 하드웨어 출력 장치와 연결하였습니다.
+
+
+---
+
+
+## Project Results
+
+### 1. 완성된 시스템
+
+Raspberry Pi, Arduino, 카메라 및 점자 출력 장치를 통합하여 제작한 AI 기반 버스 정류장 안내 시스템입니다.
+
+
