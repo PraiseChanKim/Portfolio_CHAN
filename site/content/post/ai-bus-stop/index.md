@@ -334,3 +334,11 @@ Raspberry Pi에서 처리한 버스 번호와 남은 시간을 블루투스 통�
 현재 제작한 Arduino 기반 점자 출력 장치를 더욱 소형화하고, 점자 출력 속도 및 사용자 조작 편의성을 개선하여 실제 버스 정류장에서 활용하기 적합한 형태로 발전시키고자 합니다.
 
 
+### 5. Source Code
+
+본 프로젝트의 Raspberry Pi 및 Arduino 소스코드/모델링 파일은 GitHub에서 확인할 수 있습니다.
+
+**GitHub Repository:** [AI-Bus-Stop-System](https://github.com/PraiseChanKim/AI-Bus-Stop-System)
+
+
+
