@@ -105,7 +105,7 @@ Arduino에 연결된 6개의 서보모터를 이용하여 점자 돌기를 제�
 MAX7219 기반 8×8 LED Matrix를 활용하여 시스템 시작 및 활성화 상태를 표시합니다.
 
 
-<div style="text-align: center; margin: 20px 0;">
+<div style="text-align: center; margin: 80px 0;">
 
   <img src="RaspberryPi_final_model.png"
        alt="실제 CCTV 장치 활성화 상태 표시"
@@ -285,7 +285,7 @@ Raspberry Pi, Arduino, 카메라 및 점자 출력 장치를 통합하여 AI 기
 }
 </style>
 
-<div class="arduino-gallery" style="display: flex; flex-wrap: wrap; gap: 20px; width: 100%; max-width: 100%; box-sizing: border-box; margin: 20px 0;">
+<div class="arduino-gallery" style="display: flex; flex-wrap: wrap; gap: 20px; width: 100%; max-width: 100%; box-sizing: border-box; margin: 80px 0;">
 
   <figure style="flex: 1 1 240px; min-width: 0; max-width: 100%; margin: 0; text-align: center;">
 
@@ -315,6 +315,7 @@ Raspberry Pi, Arduino, 카메라 및 점자 출력 장치를 통합하여 AI 기
 
 
 중간에 다른 정류장을 선택하고 싶을 땐 STOP 명령어를 보내면, 기존의 돌리고 있던 점자판 동작 사이클을 끝낸 후 다시 선택 모드로 들어갑니다. 
+STOP 후에도 CCTV장치 내에서 버스의 시간은 계속 흐르게 했습니다. 
 
 
 <style>
@@ -329,7 +330,7 @@ Raspberry Pi, Arduino, 카메라 및 점자 출력 장치를 통합하여 AI 기
 }
 </style>
 
-<div class="stop-gallery" style="display: flex; flex-wrap: wrap; gap: 20px; width: 100%; max-width: 100%; box-sizing: border-box; margin: 20px 0;">
+<div class="stop-gallery" style="display: flex; flex-wrap: wrap; gap: 20px; width: 100%; max-width: 100%; box-sizing: border-box; margin: 80px 0;">
 
   <figure style="flex: 1 1 240px; min-width: 0; max-width: 100%; margin: 0; text-align: center;">
 
@@ -358,7 +359,7 @@ Raspberry Pi, Arduino, 카메라 및 점자 출력 장치를 통합하여 AI 기
 </div>
 
 
-STOP 후에도 CCTV장치 내에서 버스의 시간은 계속 흐르게 했습니다. 
+
 
 ### 2. 시스템 작동 영상
 
@@ -417,7 +418,7 @@ Raspberry Pi에서 처리한 버스 번호와 남은 시간을 블루투스 통�
 }
 </style>
 
-<div class="stop-gallery" style="display: flex; flex-wrap: wrap; gap: 20px; width: 100%; max-width: 100%; box-sizing: border-box; margin: 20px 0;">
+<div class="stop-gallery" style="display: flex; flex-wrap: wrap; gap: 20px; width: 100%; max-width: 100%; box-sizing: border-box; margin: 80px 0;">
 
   <figure style="flex: 1 1 240px; min-width: 0; max-width: 100%; margin: 0; text-align: center;">
 
@@ -466,7 +467,7 @@ Raspberry Pi에서 처리한 버스 번호와 남은 시간을 블루투스 통�
     - Bluetooth 연결이 일시적으로 끊어지더라도 재연결 이후 
     기존 안내 상태를 복구할 수 있도록 개선하였습니다.
 
-<div style="text-align: center; margin: 20px 0;">
+<div style="text-align: center; margin: 80px 0;">
 
   <img src="final_exe_error_link.png"
        alt="(라즈베리파이) 재연결 장면"
@@ -490,8 +491,8 @@ Raspberry Pi에서 처리한 버스 번호와 남은 시간을 블루투스 통�
 
 **2. 객체 인식 성능 및 환경 적응력 향상**
 
-    - 다양한 조명과 날씨, 카메라 촬영 환경에서도 흰지팡이를 안정적으로 인식할 수 있도록 
-    학습 데이터를 확장하고 객체 인식 모델을 개선할 계획입니다.
+    - 다양한 조명과 날씨, 카메라 촬영 환경에서도 흰지팡이를 안정적으로 인식할 수 
+    있도록 학습 데이터를 확장하고 객체 인식 모델을 개선할 계획입니다.
 
 **3. 점자 출력 장치의 소형화 및 편의성 개선**
 
