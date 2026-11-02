@@ -89,6 +89,19 @@ Arduino에 연결된 6개의 서보모터를 이용하여 점자 돌기를 제�
 
 MAX7219 기반 8×8 LED Matrix를 활용하여 시스템 시작 및 활성화 상태를 표시합니다.
 
+<div style="display: flex; justify-content: center; gap: 15px; overflow-x: auto; padding-bottom: 10px;">
+
+  <figure style="flex: 0 0 500px; width: 500px; margin: 0;">
+    <img src="RaspberryPi_final_model.png"
+         alt="실제 CCTV장치 활성화 상태 표시"
+         style="width: 90%; height: auto; object-fit: contain;">  
+  
+  **실제 CCTV장치 활성화 상태 표시**
+  </figure>
+</div>
+
+
+
 
 ---
 
@@ -237,13 +250,24 @@ Arduino에서 Bluetooth로 수신한 명령을 처리하고, 점자 출력 장�
 
 ### 1. 완성된 시스템
 
-Raspberry Pi, Arduino, 카메라 및 점자 출력 장치를 통합하여 제작한 AI 기반 버스 정류장 안내 시스템입니다.
+Raspberry Pi, Arduino, 카메라 및 점자 출력 장치를 통합하여 AI 기반 시각장애인 버스 정류장 안내 시스템을 구현하였습니다.
+
+카메라를 통한 흰지팡이 탐지, 목적지에 따른 버스 노선 선택, 블루투스 통신 및 점자 정보 출력 기능을 하나의 시스템으로 통합하였습니다.
 
 ### 2. 시스템 작동 영상
 
-흰지팡이 객체 인식부터 버스 정보 처리, Arduino 점자 출력 장치의 동작까지 구현한 시스템의 실행 영상입니다.
+아래 영상은 흰지팡이 인식 이후 버스 정보가 Arduino 기반 점자 출력 장치로 전달되어 출력되는 과정을 보여줍니다.
 
-점자판 내용 : 101 (공백) 0 -> 101번 버스 0분 남음
+Raspberry Pi에서 처리한 버스 번호와 남은 시간을 블루투스 통신으로 Arduino에 전달하고, Arduino는 수신한 정보를 6개의 서보모터를 이용해 점자로 출력합니다.
+
+    [영상 속 점자 출력 정보]
+
+    출력 내용: 101 (공백) 0
+
+    의미: 101번 버스 / 남은 시간 0분
+
+    동작 결과: 버스 번호와 남은 시간이 점자 출력 장치를 통해 
+    정상적으로 표시되는 것을 확인하였습니다.
 
 <video controls playsinline preload="metadata"
        style="width: 50%; height: auto; border-radius: 10px;">
