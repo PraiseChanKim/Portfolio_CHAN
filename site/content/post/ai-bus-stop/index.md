@@ -89,16 +89,19 @@ Arduino에 연결된 6개의 서보모터를 이용하여 점자 돌기를 제�
 
 MAX7219 기반 8×8 LED Matrix를 활용하여 시스템 시작 및 활성화 상태를 표시합니다.
 
-<div style="display: flex; justify-content: center; gap: 15px; overflow-x: auto; padding-bottom: 10px;">
 
-  <figure style="flex: 0 0 500px; width: 500px; margin: 0;">
-    <img src="RaspberryPi_final_model.png"
-         alt="실제 CCTV장치 활성화 상태 표시"
-         style="width: 90%; height: auto; object-fit: contain;">  
-  
-  **실제 CCTV장치 활성화 상태 표시**
-  </figure>
+<div style="text-align: center; margin: 20px 0;">
+
+  <img src="RaspberryPi_final_model.png"
+       alt="실제 CCTV 장치 활성화 상태 표시"
+       style="width: 90%; max-width: 500px; height: auto;">
+
+  <p style="text-align: center;">
+    실제 CCTV 장치 활성화 상태 표시
+  </p>
+
 </div>
+
 
 
 ---
