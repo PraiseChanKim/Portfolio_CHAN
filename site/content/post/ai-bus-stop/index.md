@@ -240,9 +240,9 @@ Bluetooth 연결이 끊어지는 상황에 대응하기 위해 자동 재연결 
 
   <figure style="flex: 0 0 500px; width: 500px; margin: 0;">
     <img src="Main_Assem_v2.png"
-         alt="아두이노를 이용한 휴대용 점자 출력 장치"
+         alt="휴대용 점자 출력 장치 내부 구조 모델링"
          style="width: 100%; height: auto; object-fit: contain;">
-      휴대용 점자 출력 장치_내부
+      휴대용 점자 출력 장치 내부 구조 모델링
   </figure>
 
 </div>
@@ -435,11 +435,11 @@ Raspberry Pi에서 처리한 버스 번호와 남은 시간을 블루투스 통�
   <figure style="flex: 1 1 240px; min-width: 0; max-width: 100%; margin: 0; text-align: center;">
 
   <img src="final_exe_result.png"
-         alt="지팡이 탐지 화면"
+         alt="카메라 영상에서 흰지팡이를 인식한 YOLO 탐지 결과 화면"
          style="display: block; width: 100%; max-width: 100%; height: 250px; object-fit: contain; object-position: center;">
 
   <figcaption style="margin-top: 10px; overflow-wrap: anywhere;">
-      지팡이 탐지 화면
+      카메라 영상에서 흰지팡이를 인식한 YOLO 탐지 결과 화면
     </figcaption>
 
   </figure>
