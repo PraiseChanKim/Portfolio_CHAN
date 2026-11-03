@@ -1,8 +1,8 @@
 ---
 title: "About Me"
 description: "Kim yechan의 자기소개 및 관심 분야"
-date: 2026-01-26
-lastmod: 2026-01-26
+date: 2026-11-01
+lastmod: 2026-11-01
 menu:
     main: 
         weight: -90
