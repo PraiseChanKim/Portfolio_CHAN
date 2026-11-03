@@ -1,10 +1,9 @@
-[ko]
-    languageName = "한국어"
+[en]
+    languageName = "English"
     languagedirection = "ltr"
     title = "Kim Yechan Portfolio"
     weight = 1
 
-    [ko.params.sidebar]
-        subtitle = "Embedded Systems"
-
+[en.params.sidebar]
+    subtitle = "Embedded Systems"
 
