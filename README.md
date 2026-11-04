@@ -74,10 +74,11 @@ http://localhost:1313/
 | `site/content/page/about/` | 자기소개 페이지 |
 | `site/content/page/links/` | GitHub 및 프로젝트 링크 |
 | `site/content/post/ai-bus-stop/` | AI 버스 정류장 프로젝트 게시글 및 미디어 파일 |
+| `site/content/post/Self-balancing-RC-car/` | Self-Balancing RC Car 프로젝트 게시글 및 미디어 파일 |
 | `site/assets/img/` | 프로필 이미지 등 사이트 자산 |
 | `README.md` | 프로젝트 소개 및 실행 안내 |
 
-## Featured Project
+## Featured Projects
 
 ### AI 기반 시각장애인 버스 정류장 안내 시스템
 
@@ -88,6 +89,29 @@ Raspberry Pi, YOLO 객체 인식 모델, Arduino 및 Bluetooth 통신을 활용�
 **주요 기술:** Python, Raspberry Pi, Arduino, YOLO11n, OpenCV, Bluetooth, Fusion
 
 **프로젝트 소스코드:** https://github.com/PraiseChanKim/AI-Bus-Stop-System
+
+### ATmega328P 기반 Self-Balancing RC Car
+
+ATmega328P 마이크로컨트롤러와 MPU6050 센서를 활용하여
+차체의 균형을 자동으로 유지하는 것을 목표로 개발 중인
+2륜 RC 자동차 프로젝트입니다.
+
+I2C 통신으로 가속도 및 각속도 데이터를 수집하고,
+PD 제어 알고리즘을 통해 모터의 회전 방향과
+PWM 출력을 조절하도록 구현하였습니다.
+
+또한 Autodesk Fusion 360을 활용하여 자동차 프레임을
+직접 설계하고 3D 모델링을 진행하였습니다.
+
+현재 기울기 변화에 따른 모터 제어를 구현하였으며,
+안정적인 균형 유지를 위한 PD 제어 계수 최적화를
+진행하고 있습니다.
+
+**주요 기술:** C, ATmega328P, MPU6050, I2C,
+UART, Timer1 PWM, PD Control, Fusion 360
+
+**프로젝트 소스코드 및 3D 모델링:**
+[Self_Balancing_Rc_Car](https://github.com/PraiseChanKim/Self_Balancing_Rc_Car)
 
 ## Updating and Deploying
 
