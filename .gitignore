@@ -15,3 +15,6 @@ assets/jsconfig.json
 **/resources/_gen/
 **/.hugo_build.lock
 /.github-pages-setup-backups/
+
+# Ignore locally generated Hugo build output
+/site/public/
