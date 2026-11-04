@@ -42,7 +42,21 @@ PD 제어를 사용했으며, Atmega328p와 Atmel studio 7.0 툴을 이용했습
 - 3D 모델링 및 기구 설계: Autodesk Fusion 360을 활용하여 자동차 프레임을 직접 설계하고 3D 모델링 수행
 
 
+<div style="text-align: center; margin: 30px 0;">
+
+  <img src="Atmega328p_result_model.jpg"
+       alt="ATmega328P 초기 회로 구성"
+       style="width: 80%; max-width: 400px; height: auto;">
+
+  <p style="text-align: center;">
+    ATmega328P 초기 회로 구성
+  </p>
+
+</div>
+
+
 ---
+
 
 ## Development
 
@@ -197,6 +211,12 @@ ATmega328P의 USART 기능과 PC의 Tera Term 프로그램을 활용하여 센�
 
 UART 통신 속도는 9600bps로 설정하는 코드를 작성하였으며, printf() 함수를 통해 데이터를 출력할 수 있도록 표준 출력 스트림을 UART에 연결하는 방식을 사용하였습니다.
 
+<video controls playsinline preload="metadata"
+       style="width: 50%; height: auto; border-radius: 10px;">
+  <source src="Atmega328p_result_I2C_UART.mp4" type="video/mp4">
+  브라우저에서 동영상 재생을 지원하지 않습니다.
+</video>
+
 **센서 데이터 모니터링**
 
 센서에서 계산된 Roll, Pitch 데이터를 출력하는 디버깅 코드를 작성하여 차체의 기울기 변화를 확인할 수 있도록 구성하였습니다.
@@ -222,7 +242,7 @@ UART 통신 속도는 9600bps로 설정하는 코드를 작성하였으며, prin
 
 이를 통해 기구 설계뿐만 아니라 MCU의 레지스터 설정, 센서 통신, PWM 제어 및 피드백 제어 알고리즘을 종합적으로 학습하고 있습니다.
 
-<div style="text-align: center; margin: 80px 0;">
+<div style="text-align: center; margin: 30px 0;">
 
   <img src="final_assemble v1.png"
        alt="최종 3D 모델링"
