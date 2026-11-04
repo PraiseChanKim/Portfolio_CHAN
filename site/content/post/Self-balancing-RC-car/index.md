@@ -206,6 +206,18 @@ UART 통신 속도는 9600bps로 설정하는 코드를 작성하였으며, prin
 
 이를 통해 기구 설계뿐만 아니라 MCU의 레지스터 설정, 센서 통신, PWM 제어 및 피드백 제어 알고리즘을 종합적으로 학습하고 있습니다.
 
+<div style="text-align: center; margin: 80px 0;">
+
+  <img src="final_assemble v1.png"
+       alt="최종 3D 모델링"
+       style="width: 70%; max-width: 300px; height: auto;">
+
+  <p style="text-align: center;">
+    최종 3D 모델링
+  </p>
+
+</div>
+
 
 ---
 
