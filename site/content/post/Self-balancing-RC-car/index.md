@@ -343,7 +343,7 @@ UART, SPI, I2C, GPIO, PWM 등 임베디드 시스템의 기초적인 개념을 �
 
 본 프로젝트의 Atmega328p 소스코드, 3D 모델링 파일은 GitHub에서 확인할 수 있습니다.
 
-**GitHub Repository:** [Self_Balancing_Rc_Car](https://github.com/PraiseChanKim/AI-Bus-Stop-System)
+**GitHub Repository:** [Self_Balancing_Rc_Car](https://github.com/PraiseChanKim/Self_Balancing_Rc_Car.git)
 
 
 
