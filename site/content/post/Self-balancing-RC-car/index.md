@@ -238,7 +238,12 @@ MPU6050 IMU 센서를 통해 차체의 기울기와 각속도를 측정하고, P
 
 현재는 기울기 변화에 따른 모터 제어가 정상적으로 동작하는 단계이며, **지속적이고 안정적인 균형 유지를 위해 PD 제어 계수를 조정하고 있습니다.**
 
-
+<video controls playsinline preload="metadata"
+       style="width: 50%; height: auto; border-radius: 10px;">
+  <source src="Atmega328p_result_Exe.mp4" type="video/mp4">
+  브라우저에서 동영상 재생을 지원하지 않습니다.
+</video>
+  
 ### 3. Problem Solving
 
 **PD 제어 계수 최적화 문제**
