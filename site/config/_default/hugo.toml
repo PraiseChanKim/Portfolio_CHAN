@@ -1,5 +1,5 @@
 baseURL                = "https://demo.stack.cai.im/"
-locale                 = "en-us"
+locale                 = "ko-KR"
 title                  = "Hugo Theme Stack"
 # Theme i18n support
 # See i18n folder for available languages
