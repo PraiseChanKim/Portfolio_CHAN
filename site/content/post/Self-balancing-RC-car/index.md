@@ -151,7 +151,7 @@ PWM_init() 함수에서 Timer1을 Fast PWM 모드로 설정하였으며, ICR1 �
 ATmega328P의 PORTC를 활용하여 모터 드라이버의 방향 제어 핀을 구성하였습니다.
 
 - **PC0 / PC1:** 첫 번째 모터 방향 제어
-- **PC2 / PC3: **두 번째 모터 방향 제어
+- **PC2 / PC3:** 두 번째 모터 방향 제어
 
 Motor_Forward(), Motor_Backward(), Motor_Stop() 함수를 각각 구현하여 모터의 전진, 후진 및 정지 동작을 제어하도록 구성하였습니다.
 
@@ -170,6 +170,22 @@ PD 제어 알고리즘에서 계산된 출력값의 부호에 따라 모터의 �
 각 반복의 마지막에는 _delay_ms(5)를 적용하여 다음 제어 연산 전 약 5ms의 대기 시간을 두도록 구성하였습니다.
 
 이를 통해 센서 데이터와 모터 제어가 반복적으로 연결되는 피드백 제어 구조를 구현하였습니다.
+
+**PWM 제어 실습 및 동작 확인**
+
+아래 영상은 ATmega328P와 가변저항을 활용하여 PWM 제어를 실습한 영상입니다.
+
+가변저항의 저항값 변화에 따른 아날로그 입력을 ADC로 변환하고, 이를 바탕으로 PWM 신호의 듀티비(Duty Cycle)를 조절하는 실습을 진행하였습니다.
+
+이를 통해 PWM 제어의 기본 원리를 이해하고, 입력값의 변화에 따라 출력이 달라지는 과정을 직접 확인할 수 있었습니다.
+
+해당 실습에서 습득한 지식을 바탕으로 Self-Balancing RC Car의 모터 속도 제어 기능을 구현하였습니다.
+
+<video controls playsinline preload="metadata"
+       style="width: 50%; height: auto; border-radius: 10px;">
+  <source src="Atmega328p_result_PWM.mp4" type="video/mp4">
+  브라우저에서 동영상 재생을 지원하지 않습니다.
+</video>
 
 ### 4. UART Communication (Tera Term)
 
